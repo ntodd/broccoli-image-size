@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/ntodd/broccoli-image-size/issues"
   },
-  "homepage": "https://github.com/ntodd/broccoli-image-size"
+  "homepage": "https://github.com/ntodd/broccoli-image-size",
+  "dependencies": {
+    "broccoli-asset-rewrite": "^1.0.2",
+    "broccoli-filter": "^0.1.10",
+    "image-size": "^0.3.5",
+    "rsvp": "^3.0.16"
+  }
 }
