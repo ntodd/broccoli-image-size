@@ -1,0 +1,22 @@
+{
+  "name": "broccoli-image-size",
+  "version": "0.0.1",
+  "description": "A broccoli plugin to rewrite image asset filenames to include dimensions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ntodd/broccoli-image-size.git"
+  },
+  "keywords": [
+    "broccoli-plugin"
+  ],
+  "author": "Nate Todd <nate@pixelauthorityllc.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ntodd/broccoli-image-size/issues"
+  },
+  "homepage": "https://github.com/ntodd/broccoli-image-size"
+}
