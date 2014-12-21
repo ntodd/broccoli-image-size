@@ -1,6 +1,5 @@
 var path = require('path');
-
-var assetRev = require('./lib/asset-rev');
+var imageSizer = require('./lib/image-sizer');
 
 module.exports = {
   name: 'broccoli-image-size',
@@ -8,10 +7,12 @@ module.exports = {
     var defaultOptions = {
       enabled: this.app.env === 'production',
       exclude: [],
-      extensions: ['bmp', 'gif', 'jpg', 'png', 'tif', 'webp', 'svg'],
+      extensions: ['bmp', 'gif', 'jpg', 'png', 'tif', 'webp'],
       prepend: '',
       replaceExtensions: ['html', 'css', 'js']
     };
+
+    this.options = this.app.options.imageSize = this.app.options.imageSize || {};
 
     for (var option in defaultOptions) {
       if (!this.options.hasOwnProperty(option)) {
@@ -22,7 +23,7 @@ module.exports = {
 
   postprocessTree: function (type, tree) {
     if (type === 'all' && this.options.enabled) {
-      tree = assetRev(tree, this.options);
+      tree = imageSizer(tree, this.options);
     }
     return tree;
   },
